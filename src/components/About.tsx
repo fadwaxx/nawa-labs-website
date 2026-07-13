@@ -8,7 +8,7 @@ export default function About() {
   const t = translations[lang];
 
   return (
-    <section id="about" className="bg-black py-20 sm:py-28 px-4">
+    <section id="about" className="bg-surface/90 py-20 sm:py-28 px-4">
       <div className="max-w-6xl mx-auto bg-[#101010] rounded-2xl md:rounded-[2rem] px-6 sm:px-10 md:px-16 py-14 sm:py-20 text-center">
         <span className="text-primary text-[10px] sm:text-xs tracking-[0.2em] uppercase">
           {t.about.badge}

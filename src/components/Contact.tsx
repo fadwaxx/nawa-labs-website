@@ -22,7 +22,7 @@ export default function Contact() {
   };
 
   return (
-    <footer id="contact" className="bg-black px-4 sm:px-6 pb-6">
+    <footer id="contact" className="bg-surface/90 px-4 sm:px-6 pb-6">
       <div className="max-w-6xl mx-auto bg-[#101010] rounded-2xl md:rounded-[2rem] px-6 sm:px-10 md:px-16 py-16 sm:py-24 text-center">
 
         <span className="text-primary text-[10px] sm:text-xs tracking-[0.2em] uppercase">
@@ -44,7 +44,7 @@ export default function Contact() {
 
           <a
             href={`mailto:${email}`}
-            className="group rounded-2xl border border-primary/15 bg-black/30 p-5 text-right transition-all hover:border-primary/60 hover:-translate-y-1"
+            className="group rounded-2xl border border-primary/15 bg-background/55 p-5 text-right transition-all hover:border-primary/60 hover:-translate-y-1"
           >
             <Mail className="w-5 h-5 mb-4 text-primary" />
 
@@ -61,7 +61,7 @@ export default function Contact() {
             href={`https://wa.me/${phone}`}
             target="_blank"
             rel="noreferrer"
-            className="group rounded-2xl border border-primary/15 bg-black/30 p-5 text-right transition-all hover:border-primary/60 hover:-translate-y-1"
+            className="group rounded-2xl border border-primary/15 bg-background/55 p-5 text-right transition-all hover:border-primary/60 hover:-translate-y-1"
           >
             <MessageCircle className="w-5 h-5 mb-4 text-primary" />
 
@@ -78,7 +78,7 @@ export default function Contact() {
             href="https://github.com/fadwaxx"
             target="_blank"
             rel="noreferrer"
-            className="group rounded-2xl border border-primary/15 bg-black/30 p-5 text-right transition-all hover:border-primary/60 hover:-translate-y-1"
+            className="group rounded-2xl border border-primary/15 bg-background/55 p-5 text-right transition-all hover:border-primary/60 hover:-translate-y-1"
           >
             <Github className="w-5 h-5 mb-4 text-primary" />
 
@@ -93,7 +93,7 @@ export default function Contact() {
 
           <a
             href="#"
-            className="group rounded-2xl border border-primary/15 bg-black/30 p-5 text-right transition-all hover:border-primary/60 hover:-translate-y-1"
+            className="group rounded-2xl border border-primary/15 bg-background/55 p-5 text-right transition-all hover:border-primary/60 hover:-translate-y-1"
           >
             <Linkedin className="w-5 h-5 mb-4 text-primary" />
 

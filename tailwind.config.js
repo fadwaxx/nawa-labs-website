@@ -5,38 +5,27 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#E1E0CC',
+        background: '#E0D0D0',
+        surface: '#D6C7C7',
+        card: '#CEC0C0',
 
-        background: '#050505',
-        surface: '#101010',
-        card: '#181818',
+        primary: '#433535',
+        muted: '#6E5C5C',
 
-        muted: '#929286',
-        accent: '#C8FF6A',
+        accent: '#A67676',
+        'accent-hover': '#956666',
 
-        border: 'rgba(225, 224, 204, 0.12)',
-        'border-strong': 'rgba(225, 224, 204, 0.24)',
-      },
-
-      fontFamily: {
-        sans: [
-          'Almarai',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          '"Segoe UI"',
-          'sans-serif',
-        ],
-
-        serif: ['"Instrument Serif"', 'serif'],
+        border: '#BDAAAA',
+        'border-strong': '#A99292',
       },
 
       boxShadow: {
-        soft: '0 20px 60px rgba(0, 0, 0, 0.35)',
-        glow: '0 0 40px rgba(200, 255, 106, 0.12)',
+        soft: '0 20px 60px rgba(67, 53, 53, 0.10)',
+        card: '0 12px 30px rgba(67, 53, 53, 0.08)',
       },
 
-      transitionTimingFunction: {
-        smooth: 'cubic-bezier(0.16, 1, 0.3, 1)',
+      fontFamily: {
+        serif: ['"Instrument Serif"', 'serif'],
       },
     },
   },

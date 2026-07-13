@@ -303,7 +303,7 @@ export default function ProjectDetails() {
       </h2>
     </div>
 
-    <div className="overflow-hidden rounded-[1.75rem] border border-border bg-black">
+    <div className="overflow-hidden rounded-[1.75rem] border border-border bg-surface/90">
       <video
         key={project.video}
         controls
@@ -311,7 +311,7 @@ export default function ProjectDetails() {
         playsInline
         preload="metadata"
         poster={project.cover}
-        className="aspect-video w-full bg-black object-contain"
+        className="aspect-video w-full bg-surface/90 object-contain"
       >
         <source src={project.video} type="video/mp4" />
 
@@ -446,7 +446,7 @@ export default function ProjectDetails() {
       {/* تكبير الصور */}
       {selectedImage && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 backdrop-blur-md"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-background/55 p-4 backdrop-blur-md"
           onClick={() => setSelectedImage(null)}
         >
           <button

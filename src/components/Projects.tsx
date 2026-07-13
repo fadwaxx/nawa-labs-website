@@ -145,7 +145,7 @@ export default function Projects() {
                       className={`inline-flex items-center gap-2 rounded-full border px-3 py-2 text-[10px] backdrop-blur-md sm:text-xs ${
                         isCompleted
                           ? 'border-accent/30 bg-accent/10 text-accent'
-                          : 'border-primary/20 bg-black/45 text-primary/65'
+                          : 'border-primary/20 bg-background/55 text-primary/65'
                       }`}
                     >
                       {!isCompleted && (

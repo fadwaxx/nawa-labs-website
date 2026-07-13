@@ -20,7 +20,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="bg-black py-20 sm:py-28 px-4">
+    <section id="skills" className="bg-surface/90 py-20 sm:py-28 px-4">
       <div className="max-w-6xl mx-auto bg-[#101010] rounded-2xl md:rounded-[2rem] px-6 sm:px-10 md:px-16 py-14 sm:py-20">
         <div className="text-center mb-12 sm:mb-16">
           <span className="text-primary text-[10px] sm:text-xs tracking-[0.2em] uppercase">

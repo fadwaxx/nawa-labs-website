@@ -1,24 +1,24 @@
 export const translations = {
     en: {
       navbar: {
-        about: 'About',
+        about: 'About Us',
         services: 'Services',
-        skills: 'Skills',
+        skills: 'Technologies',
         projects: 'Projects',
         process: 'Process',
         contact: 'Contact',
       },
   
       hero: {
-        badge: 'Software Engineer · Full-Stack Web Developer',
-        title: 'Fadwa',
+        badge: 'Software Development Team',
+        title: 'Nawa Labs',
         subtitle:
-          'I design and build modern websites, web applications, admin dashboards, and custom business solutions.',
+          'We design and build modern websites, digital systems, and scalable web applications together.',
         description:
-          'Full-stack developer specialized in React, TypeScript, Node.js, Express.js, MongoDB, REST APIs, and responsive UI/UX.',
-        hire: 'Hire Me',
-        projects: 'View Projects',
-        cv: 'Download CV',
+          'A collaborative software team combining development, design, planning, and technical problem solving to turn ideas into reliable digital products.',
+        hire: 'Start a Project',
+        projects: 'Our Projects',
+        cv: 'Meet the Team',
       },
   
       about: {
@@ -152,24 +152,24 @@ export const translations = {
   
     ar: {
       navbar: {
-        about: 'من أنا',
-        services: 'الخدمات',
-        skills: 'المهارات',
-        projects: 'المشاريع',
-        process: 'طريقة عملي',
-        contact: 'تواصل',
+        about: 'من نحن',
+        services: 'خدماتنا',
+        skills: 'تقنياتنا',
+        projects: 'مشاريعنا',
+        process: 'طريقة عملنا',
+        contact: 'تواصل معنا',
       },
   
       hero: {
-        badge: 'مهندسة برمجيات · مطورة ويب فل ستاك',
-        title: 'فدوى',
+        badge: 'فريق متخصص في تطوير البرمجيات',
+        title: 'Nawa Labs',
         subtitle:
-          'أصمم وأطور مواقع وتطبيقات ويب حديثة ولوحات تحكم وأنظمة مخصصة للأعمال.',
+          'نصمم ونطور المواقع والأنظمة الرقمية وتطبيقات الويب الحديثة بروح فريق واحدة.',
         description:
-          'مطورة ويب فل ستاك متخصصة في React وNode.js وExpress.js وMongoDB لبناء حلول رقمية احترافية.',
-        hire: 'تواصل معي',
-        projects: 'مشاريعي',
-        cv: 'تحميل السيرة',
+          'فريق برمجي يجمع بين التطوير والتصميم والتخطيط وحل المشكلات التقنية لتحويل الأفكار إلى منتجات رقمية موثوقة.',
+        hire: 'ابدأ مشروعك',
+        projects: 'مشاريعنا',
+        cv: 'تعرّف على الفريق',
       },
   
       about: {

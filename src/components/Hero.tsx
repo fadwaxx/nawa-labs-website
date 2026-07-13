@@ -72,7 +72,7 @@ export default function Hero() {
       id="home"
       className="min-h-screen bg-background p-3 sm:p-4 md:p-6"
     >
-      <div className="relative min-h-[calc(100vh-24px)] overflow-hidden rounded-2xl bg-black sm:min-h-[calc(100vh-32px)] md:min-h-[calc(100vh-48px)] md:rounded-[2rem]">
+      <div className="relative min-h-[calc(100vh-24px)] overflow-hidden rounded-2xl bg-surface sm:min-h-[calc(100vh-32px)] md:min-h-[calc(100vh-48px)] md:rounded-[2rem]">
         {/* فيديو الخلفية */}
         <video
   autoPlay
@@ -82,15 +82,15 @@ export default function Hero() {
   preload="auto"
   className="absolute inset-0 h-full w-full object-cover brightness-[0.78] contrast-[1.08] saturate-[0.85]"
 >
-  <source src="/hero-bg.mp4" type="video/mp4" />
+<source src="/nawa-team-bg.mp4" type="video/mp4" />
 </video>
 
         {/* طبقات سينمائية */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_65%_25%,rgba(200,255,106,0.09),transparent_28%)]" />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/8 to-black/65" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/15 via-transparent to-background/55" />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black/25 via-transparent to-black/8" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/5" />
 
         <div className="noise-overlay pointer-events-none absolute inset-0 opacity-[0.18] mix-blend-overlay" />
 
@@ -117,7 +117,7 @@ export default function Hero() {
             </span>
           </div>
 
-          <div className="ml-auto flex items-center gap-2 rounded-full border border-accent/25 bg-black/25 px-3 py-2 text-[10px] text-primary/80 backdrop-blur-md sm:text-xs">
+          <div className="ml-auto flex items-center gap-2 rounded-full border border-accent/25 bg-background/55 px-3 py-2 text-[10px] text-primary/80 backdrop-blur-md sm:text-xs">
             <span className="relative flex h-2.5 w-2.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-50" />
               <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent" />
@@ -144,7 +144,7 @@ export default function Hero() {
               }}
               className="mb-5"
             >
-              <span className="inline-flex rounded-full border border-primary/20 bg-black/20 px-4 py-2 text-[10px] uppercase tracking-[0.18em] text-primary/75 backdrop-blur-md sm:text-xs">
+              <span className="inline-flex rounded-full border border-primary/20 bg-background/55 px-4 py-2 text-[10px] uppercase tracking-[0.18em] text-primary/75 backdrop-blur-md sm:text-xs">
                 {t.hero.badge}
               </span>
             </motion.div>
@@ -192,7 +192,7 @@ export default function Hero() {
              <MagneticButton>
   <a
     href="#contact"
-    className={`group inline-flex items-center gap-3 rounded-full border border-primary/25 bg-black/35 py-1.5 text-sm font-medium text-primary backdrop-blur-md transition-colors hover:border-accent hover:text-accent sm:text-base ${
+    className={`group inline-flex items-center gap-3 rounded-full border border-primary/25 bg-background/55 py-1.5 text-sm font-medium text-primary backdrop-blur-md transition-colors hover:border-accent hover:text-accent sm:text-base ${
       lang === 'ar'
         ? 'pl-3 pr-6'
         : 'pl-5 pr-1.5'
@@ -219,7 +219,7 @@ export default function Hero() {
     {t.hero.hire}
   </span>
 
-  <span className="bg-black rounded-full w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-110">
+  <span className="bg-surface/90 rounded-full w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-110">
     <ArrowRight className="w-5 h-5" style={{ color: '#E1E0CC' }} />
   </span>
 </a>
@@ -263,7 +263,7 @@ export default function Hero() {
               </p>
 
               <div className="mt-6 grid grid-cols-3 gap-2">
-                <div className="rounded-2xl border border-primary/10 bg-black/20 p-4 backdrop-blur-md">
+                <div className="rounded-2xl border border-primary/10 bg-background/55 p-4 backdrop-blur-md">
                   <span className="block text-[10px] uppercase tracking-[0.15em] text-primary/40">
                     {isArabic ? 'التخصص' : 'Focus'}
                   </span>
@@ -273,7 +273,7 @@ export default function Hero() {
                   </strong>
                 </div>
 
-                <div className="rounded-2xl border border-primary/10 bg-black/20 p-4 backdrop-blur-md">
+                <div className="rounded-2xl border border-primary/10 bg-background/55 p-4 backdrop-blur-md">
                   <span className="block text-[10px] uppercase tracking-[0.15em] text-primary/40">
                     {isArabic ? 'العمل' : 'Work'}
                   </span>
@@ -283,7 +283,7 @@ export default function Hero() {
                   </strong>
                 </div>
 
-                <div className="rounded-2xl border border-primary/10 bg-black/20 p-4 backdrop-blur-md">
+                <div className="rounded-2xl border border-primary/10 bg-background/55 p-4 backdrop-blur-md">
                   <span className="block text-[10px] uppercase tracking-[0.15em] text-primary/40">
                     {isArabic ? 'السنة' : 'Year'}
                   </span>

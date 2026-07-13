@@ -50,7 +50,7 @@ function ServiceCard({
       transition={{ duration: 0.6, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
       className="relative bg-[#212121] rounded-2xl p-6 flex flex-col gap-4 hover:bg-[#262626] transition-colors"
     >
-      <div className="w-10 h-10 rounded-full bg-black/60 flex items-center justify-center">
+      <div className="w-10 h-10 rounded-full bg-background/55 flex items-center justify-center">
         <Icon className="w-5 h-5 text-primary" />
       </div>
 
@@ -73,7 +73,7 @@ export default function Services() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="services" className="min-h-screen bg-black relative py-20 sm:py-28 px-4 sm:px-6">
+    <section id="services" className="min-h-screen bg-surface/90 relative py-20 sm:py-28 px-4 sm:px-6">
       <div className="absolute inset-0 bg-noise opacity-[0.15] pointer-events-none" />
 
       <div ref={ref} className="relative max-w-6xl mx-auto text-center mb-14 sm:mb-20">

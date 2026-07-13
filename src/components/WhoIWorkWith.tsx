@@ -56,7 +56,7 @@ export default function WhoIWorkWith() {
   ];
 
   return (
-    <section className="min-h-screen bg-black relative py-20 sm:py-28 px-4 sm:px-6">
+    <section className="min-h-screen bg-surface/90 relative py-20 sm:py-28 px-4 sm:px-6">
       <div className="absolute inset-0 bg-noise opacity-[0.15] pointerEvents-none" />
 
       <div className="relative max-w-6xl mx-auto text-center mb-14">
@@ -85,7 +85,7 @@ export default function WhoIWorkWith() {
             }}
             className="bg-[#212121] rounded-2xl p-6 flex flex-col items-center text-center gap-4 lg:h-[220px] justify-center"
           >
-            <div className="w-11 h-11 rounded-full bg-black/60 flex items-center justify-center">
+            <div className="w-11 h-11 rounded-full bg-background/55 flex items-center justify-center">
               <item.icon className="w-5 h-5 text-primary" />
             </div>
 
