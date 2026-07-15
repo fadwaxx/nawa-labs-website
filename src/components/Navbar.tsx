@@ -5,7 +5,9 @@ export default function Navbar() {
   const { lang, toggleLang } = useLanguage();
   const t = translations[lang];
 
-  const NAV_ITEMS = [
+  const isArabic = lang === 'ar';
+
+  const navItems = [
     { label: t.navbar.about, href: '#about' },
     { label: t.navbar.services, href: '#services' },
     { label: t.navbar.skills, href: '#skills' },
@@ -15,39 +17,49 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="absolute top-0 left-1/2 -translate-x-1/2 z-20">
-      <div className="bg-surface/90 rounded-b-2xl md:rounded-b-3xl px-4 py-2 md:px-8">
-        <ul className="flex items-center gap-3 sm:gap-6 md:gap-10 lg:gap-12">
-          {NAV_ITEMS.map((item) => (
-            <li key={item.label}>
+    <nav className="absolute left-4 right-4 top-4 z-30 sm:left-6 sm:right-6 md:left-8 md:right-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 rounded-full border border-border/80 bg-surface/85 px-4 py-2.5 shadow-card backdrop-blur-xl sm:px-5 md:px-6">
+        {/* اسم الفريق */}
+        <a
+          href="#home"
+          className="shrink-0 text-sm font-semibold tracking-[-0.03em] text-primary transition-colors hover:text-accent sm:text-base md:text-lg"
+        >
+          Nawa Labs
+        </a>
+
+        {/* روابط التنقل */}
+        <ul className="hidden items-center gap-4 lg:flex xl:gap-7">
+          {navItems.map((item) => (
+            <li key={item.href}>
               <a
                 href={item.href}
-                className="text-[10px] sm:text-xs md:text-sm transition-colors whitespace-nowrap"
-                style={{ color: 'rgba(225, 224, 204, 0.8)' }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.color = '#E1E0CC')
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.color =
-                    'rgba(225, 224, 204, 0.8)')
-                }
+                className="whitespace-nowrap text-xs text-primary/70 transition-colors hover:text-primary xl:text-sm"
               >
                 {item.label}
               </a>
             </li>
           ))}
-
-<li>
-  <button
-    onClick={toggleLang}
-    className="flex items-center gap-2 text-[10px] sm:text-xs md:text-sm border border-primary/30 rounded-full px-4 py-2 transition-all hover:border-primary hover:bg-primary/10"
-    style={{ color: '#E1E0CC' }}
-  >
-    <span>{lang === 'ar' ? '🇺🇸' : '🇸🇦'}</span>
-    <span>{lang === 'ar' ? 'English' : 'العربية'}</span>
-  </button>
-</li>
         </ul>
+
+        {/* تغيير اللغة */}
+        <button
+          type="button"
+          onClick={toggleLang}
+          className="inline-flex shrink-0 items-center gap-2 rounded-full border border-border-strong bg-background/70 px-3 py-2 text-[10px] font-medium text-primary transition-all hover:border-accent hover:bg-card hover:text-accent sm:px-4 sm:text-xs"
+          aria-label={
+            isArabic
+              ? 'Switch to English'
+              : 'التبديل إلى العربية'
+          }
+        >
+          <span aria-hidden="true">
+            {isArabic ? '🇺🇸' : '🇸🇦'}
+          </span>
+
+          <span>
+            {isArabic ? 'English' : 'العربية'}
+          </span>
+        </button>
       </div>
     </nav>
   );

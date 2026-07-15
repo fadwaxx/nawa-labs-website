@@ -50,15 +50,15 @@ function ServiceCard({
       transition={{ duration: 0.6, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
       className="relative bg-[#212121] rounded-2xl p-6 flex flex-col gap-4 hover:bg-[#262626] transition-colors"
     >
-      <div className="w-10 h-10 rounded-full bg-background/55 flex items-center justify-center">
+      <div className="w-10 h-10 rounded-full bg-[#E7D3D3] flex items-center justify-center">
         <Icon className="w-5 h-5 text-primary" />
       </div>
 
-      <h3 className="text-primary text-base sm:text-lg font-medium">
+      <h3 className="text-[#F4E7E7] text-base sm:text-lg font-semibold">
         {title}
       </h3>
 
-      <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
+      <p className="text-[#D8CACA] text-xs sm:text-sm leading-relaxed">
         {desc}
       </p>
     </motion.div>
@@ -87,7 +87,7 @@ export default function Services() {
         </motion.p>
 
         <motion.p
-          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-gray-500 mt-1"
+          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-[#D3BDBD] mt-1"
           initial={{ opacity: 0, y: 15 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}

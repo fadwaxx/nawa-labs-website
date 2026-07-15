@@ -8,7 +8,6 @@ import {
   ArrowDown,
   ArrowRight,
   ArrowUpRight,
-  Download,
   MapPin,
 } from 'lucide-react';
 
@@ -75,31 +74,40 @@ export default function Hero() {
       <div className="relative min-h-[calc(100vh-24px)] overflow-hidden rounded-2xl bg-surface sm:min-h-[calc(100vh-32px)] md:min-h-[calc(100vh-48px)] md:rounded-[2rem]">
         {/* فيديو الخلفية */}
         <video
-  autoPlay
-  loop
-  muted
-  playsInline
-  preload="auto"
-  className="absolute inset-0 h-full w-full object-cover brightness-[0.78] contrast-[1.08] saturate-[0.85]"
->
-<source src="/nawa-team-bg.mp4" type="video/mp4" />
-</video>
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="absolute inset-0 h-full w-full object-cover brightness-[0.92] contrast-[0.96] saturate-[0.85]"
+        >
+          <source
+            src="/nawa-team-bg.mp4"
+            type="video/mp4"
+          />
+        </video>
 
-        {/* طبقات سينمائية */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_65%_25%,rgba(200,255,106,0.09),transparent_28%)]" />
+        {/* طبقات الخلفية */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/25 to-background/10" />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-background/15 via-transparent to-background/55" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/5 via-transparent to-background/45" />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/5" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_20%,rgba(166,118,118,0.18),transparent_32%)]" />
 
-        <div className="noise-overlay pointer-events-none absolute inset-0 opacity-[0.18] mix-blend-overlay" />
+        <div className="noise-overlay pointer-events-none absolute inset-0 opacity-[0.12] mix-blend-overlay" />
 
         <Navbar />
 
         {/* معلومات أعلى الهيرو */}
         <motion.div
-          initial={{ opacity: 0, y: -12 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{
+            opacity: 0,
+            y: -12,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
           transition={{
             duration: 0.7,
             delay: 0.25,
@@ -112,186 +120,183 @@ export default function Hero() {
 
             <span>
               {isArabic
-                ? 'المملكة العربية السعودية'
-                : 'Saudi Arabia'}
+                ? 'نعمل من المملكة العربية السعودية'
+                : 'Based in Saudi Arabia'}
             </span>
           </div>
 
-          <div className="ml-auto flex items-center gap-2 rounded-full border border-accent/25 bg-background/55 px-3 py-2 text-[10px] text-primary/80 backdrop-blur-md sm:text-xs">
+          <div className="ml-auto flex items-center gap-2 rounded-full border border-accent/25 bg-background/65 px-3 py-2 text-[10px] text-primary/80 shadow-card backdrop-blur-md sm:text-xs">
             <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-50" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-40" />
+
               <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent" />
             </span>
 
             <span>
               {isArabic
-                ? 'متاحة للعمل والمشاريع'
-                : 'Available for work'}
+                ? 'متاحون للمشاريع'
+                : 'Available for Projects'}
             </span>
           </div>
         </motion.div>
 
         {/* المحتوى الرئيسي */}
-        <div className="relative z-10 grid min-h-[calc(100vh-24px)] grid-cols-12 content-end gap-6 px-5 pb-8 pt-32 sm:min-h-[calc(100vh-32px)] sm:px-8 sm:pb-10 md:min-h-[calc(100vh-48px)] md:px-12 md:pb-12 lg:gap-10">
-          <div className="col-span-12 lg:col-span-8">
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
+        <div className="relative z-10 grid min-h-[calc(100vh-24px)] grid-cols-1 items-end gap-10 px-5 pb-10 pt-32 sm:min-h-[calc(100vh-32px)] sm:px-8 md:min-h-[calc(100vh-48px)] md:px-12 md:pb-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          {/* النص */}
+          <div className="max-w-xl">
+            <motion.span
+              initial={{
+                opacity: 0,
+                y: 18,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
               transition={{
                 duration: 0.65,
-                delay: 0.1,
                 ease: EASE,
               }}
-              className="mb-5"
+              className="inline-flex rounded-full border border-primary/20 bg-background/65 px-4 py-2 text-[10px] uppercase tracking-[0.18em] text-primary/75 shadow-card backdrop-blur-md sm:text-xs"
             >
-              <span className="inline-flex rounded-full border border-primary/20 bg-background/55 px-4 py-2 text-[10px] uppercase tracking-[0.18em] text-primary/75 backdrop-blur-md sm:text-xs">
-                {t.hero.badge}
-              </span>
-            </motion.div>
+              {t.hero.badge}
+            </motion.span>
 
             <motion.div
               style={{
                 x: smoothX,
                 y: smoothY,
               }}
-              className="will-change-transform"
+              className="mt-6 will-change-transform"
             >
-            <h1
-  className="overflow-visible pb-5 text-[20vw] font-medium leading-[1] tracking-[-0.075em] text-primary sm:text-[17vw] md:text-[14vw] lg:text-[11vw] xl:text-[10vw]"
->
-  <WordsPullUp
-    text={t.hero.title}
-    showAsterisk
-  />
-</h1>
+              <h1 className="overflow-visible text-6xl font-semibold leading-[0.88] tracking-[-0.06em] text-primary sm:text-7xl md:text-8xl lg:text-[7.5rem]">
+                <WordsPullUp text={t.hero.title} />
+              </h1>
             </motion.div>
 
             <motion.p
-              initial={{ opacity: 0, y: 22 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
               transition={{
                 duration: 0.7,
-                delay: 0.42,
+                delay: 0.3,
                 ease: EASE,
               }}
-              className="mt-6 max-w-2xl text-sm leading-7 text-primary/70 sm:text-base sm:leading-8 md:text-lg"
+              className="mt-7 max-w-lg text-sm leading-7 text-primary/70 sm:text-base sm:leading-8"
             >
               {t.hero.subtitle}
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 22 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
               transition={{
                 duration: 0.7,
-                delay: 0.58,
+                delay: 0.45,
                 ease: EASE,
               }}
-              className="mt-7 flex flex-wrap gap-3"
+              className="mt-8 flex flex-wrap gap-3"
             >
-             <MagneticButton>
-  <a
-    href="#contact"
-    className={`group inline-flex items-center gap-3 rounded-full border border-primary/25 bg-background/55 py-1.5 text-sm font-medium text-primary backdrop-blur-md transition-colors hover:border-accent hover:text-accent sm:text-base ${
-      lang === 'ar'
-        ? 'pl-3 pr-6'
-        : 'pl-5 pr-1.5'
-    }`}
-  >
-    <span>{t.hero.hire}</span>
+              <MagneticButton>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3 text-sm font-medium text-background shadow-card transition-all hover:-translate-y-1 sm:text-base"
+                >
+                  {t.hero.hire}
 
-    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-black">
-      <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-    </span>
-  </a>
-</MagneticButton>
-
-              <MagneticButton strength={0.16}>
-              <a
-  href="#contact"
-  className={`group flex items-center gap-2 rounded-full bg-primary py-1.5 transition-all hover:gap-3 ${
-    lang === 'ar'
-      ? 'flex-row-reverse pr-5 pl-1.5'
-      : 'pl-5 pr-1.5'
-  }`}
->
-  <span className="text-black font-medium text-sm sm:text-base">
-    {t.hero.hire}
-  </span>
-
-  <span className="bg-surface/90 rounded-full w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-110">
-    <ArrowRight className="w-5 h-5" style={{ color: '#E1E0CC' }} />
-  </span>
-</a>
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
               </MagneticButton>
 
-              <MagneticButton strength={0.12}>
-  <a
-    href="/Fadwa_Alsaif_CV.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center gap-2 rounded-full px-4 py-3 text-sm text-primary/65 transition-colors hover:text-primary sm:text-base"
-  >
-    <Download className="h-4 w-4" />
-    {t.hero.cv}
-  </a>
-</MagneticButton>
-        
+              <MagneticButton strength={0.14}>
+                <a
+                  href="#projects"
+                  className="inline-flex items-center gap-3 rounded-full border border-primary/25 bg-[#E7D3D3] px-6 py-3 text-sm font-medium text-primary shadow-card backdrop-blur-md transition-all hover:-translate-y-1 hover:border-accent hover:text-accent sm:text-base"
+                >
+                  {t.hero.projects}
+
+                  <ArrowRight
+                    className={`h-4 w-4 ${
+                      isArabic ? 'rotate-180' : ''
+                    }`}
+                  />
+                </a>
+              </MagneticButton>
             </motion.div>
           </div>
 
-          {/* الجهة الجانبية */}
+          {/* الجهة اليمنى */}
           <motion.div
-            initial={{ opacity: 0, y: 26 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{
+              opacity: 0,
+              y: 30,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
             transition={{
-              duration: 0.75,
-              delay: 0.5,
+              duration: 0.8,
+              delay: 0.2,
               ease: EASE,
             }}
-            className="col-span-12 flex flex-col justify-end lg:col-span-4 lg:items-end"
+            className="flex flex-col justify-end lg:items-end"
           >
-            <div
-              className={`max-w-md border-t border-primary/15 pt-5 ${
-                isArabic
-                  ? 'text-right'
-                  : 'lg:text-right'
+            <p
+              className={`max-w-md text-sm leading-8 text-primary/65 ${
+                isArabic ? 'text-right' : 'lg:text-right'
               }`}
             >
-              <p className="text-xs leading-7 text-primary/65 sm:text-sm sm:leading-8">
-                {t.hero.description}
-              </p>
+              {t.hero.description}
+            </p>
 
-              <div className="mt-6 grid grid-cols-3 gap-2">
-                <div className="rounded-2xl border border-primary/10 bg-background/55 p-4 backdrop-blur-md">
-                  <span className="block text-[10px] uppercase tracking-[0.15em] text-primary/40">
-                    {isArabic ? 'التخصص' : 'Focus'}
-                  </span>
+            <div className="mt-7 grid w-full grid-cols-1 gap-3 sm:grid-cols-3 lg:max-w-lg">
+              <div className="rounded-3xl border border-border bg-background/75 p-5 text-center shadow-card backdrop-blur-md">
+                <span className="text-[10px] uppercase tracking-[0.16em] text-muted">
+                  {isArabic ? 'الخدمات' : 'Services'}
+                </span>
 
-                  <strong className="mt-2 block text-xs font-medium text-primary/85 sm:text-sm">
-                    Full-Stack
-                  </strong>
-                </div>
+                <strong className="mt-3 block text-sm font-medium text-primary">
+                  {isArabic
+                    ? 'الويب والأنظمة'
+                    : 'Web & Systems'}
+                </strong>
+              </div>
 
-                <div className="rounded-2xl border border-primary/10 bg-background/55 p-4 backdrop-blur-md">
-                  <span className="block text-[10px] uppercase tracking-[0.15em] text-primary/40">
-                    {isArabic ? 'العمل' : 'Work'}
-                  </span>
+              <div className="rounded-3xl border border-border bg-background/75 p-5 text-center shadow-card backdrop-blur-md">
+                <span className="text-[10px] uppercase tracking-[0.16em] text-muted">
+                  {isArabic ? 'المشاريع' : 'Projects'}
+                </span>
 
-                  <strong className="mt-2 block text-xs font-medium text-primary/85 sm:text-sm">
-                    Web Apps
-                  </strong>
-                </div>
+                <strong className="mt-3 block text-sm font-medium text-primary">
+                  {isArabic
+                    ? 'منتجات رقمية'
+                    : 'Digital Products'}
+                </strong>
+              </div>
 
-                <div className="rounded-2xl border border-primary/10 bg-background/55 p-4 backdrop-blur-md">
-                  <span className="block text-[10px] uppercase tracking-[0.15em] text-primary/40">
-                    {isArabic ? 'السنة' : 'Year'}
-                  </span>
+              <div className="rounded-3xl border border-border bg-background/75 p-5 text-center shadow-card backdrop-blur-md">
+                <span className="text-[10px] uppercase tracking-[0.16em] text-muted">
+                  {isArabic ? 'الفريق' : 'Team'}
+                </span>
 
-                  <strong className="mt-2 block text-xs font-medium text-primary/85 sm:text-sm">
-                    2026
-                  </strong>
-                </div>
+                <strong className="mt-3 block text-sm font-medium text-primary">
+                  {isArabic
+                    ? '5 أعضاء'
+                    : '5 Members'}
+                </strong>
               </div>
             </div>
           </motion.div>
@@ -299,22 +304,28 @@ export default function Hero() {
           {/* مؤشر النزول */}
           <motion.a
             href="#projects"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
             transition={{
               duration: 0.7,
               delay: 0.9,
             }}
-            className="col-span-12 mt-2 inline-flex w-fit items-center gap-3 text-[10px] uppercase tracking-[0.18em] text-primary/45 transition-colors hover:text-accent sm:text-xs"
+            className="mt-2 inline-flex w-fit items-center gap-3 text-[10px] uppercase tracking-[0.18em] text-primary/45 transition-colors hover:text-accent sm:text-xs lg:col-span-2"
           >
             <motion.span
-              animate={{ y: [0, 6, 0] }}
+              animate={{
+                y: [0, 6, 0],
+              }}
               transition={{
                 duration: 1.8,
                 repeat: Infinity,
                 ease: 'easeInOut',
               }}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-primary/20"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-primary/20 bg-background/45 backdrop-blur-md"
             >
               <ArrowDown className="h-4 w-4" />
             </motion.span>

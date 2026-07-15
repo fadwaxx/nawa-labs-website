@@ -446,7 +446,7 @@ export default function ProjectDetails() {
       {/* تكبير الصور */}
       {selectedImage && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-background/55 p-4 backdrop-blur-md"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-[#E7D3D3] p-4 backdrop-blur-md"
           onClick={() => setSelectedImage(null)}
         >
           <button

@@ -14,7 +14,7 @@ export default function App() {
         <ScrollProgress />
         <CursorGlow />
 
-        <main className="min-h-screen bg-background text-primary">
+        <main className="min-h-screen bg-background text-[#7A5A5A]">
           <AnimatedRoutes />
         </main>
       </BrowserRouter>
